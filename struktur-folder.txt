@@ -1,0 +1,31 @@
+playwright/
+│
+├── apps/
+│   ├── e-course-admin/
+│   │   └── tests
+│   │
+│   ├── e-course-user/
+│   │   └── tests
+│   │
+│   └── learn/
+│       ├── Chapter01/
+│       └── Chapter02/
+│
+├── core/
+│   ├── base-page.ts
+│   └── api-client.ts
+│
+├── fixtures/
+│
+├── utils/
+│   ├── helpers.ts
+│   └── screenshot-helper.ts
+│
+├── test-data/
+│
+├── test-results/
+├── playwright-report/
+│
+├── playwright.config.ts
+├── package.json
+└── README.md
