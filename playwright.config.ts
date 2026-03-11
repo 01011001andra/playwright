@@ -12,6 +12,14 @@ import { defineConfig, devices } from "@playwright/test";
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  /* Timeout untuk satu test secara keseluruhan */
+  timeout: 5 * 60 * 1000, // 5 menit
+
+  expect: {
+    /* Timeout untuk setiap assertion (expect) */
+    timeout: 5 * 60 * 1000, // 5 menit
+  },
+
   testDir: "./apps",
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -25,6 +33,9 @@ export default defineConfig({
   reporter: "html",
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+    /* Timeout maksimum untuk setiap aksi seperti click(), fill(), dsb. */
+    actionTimeout: 5 * 60 * 1000, // 5 menit
+
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
