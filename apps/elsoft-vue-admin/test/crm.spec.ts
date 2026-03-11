@@ -8,6 +8,11 @@ test("CRM Test", async ({ page, context }) => {
     await page.locator('#Domain').click();
     await page.locator('#Domain').fill('olsera.group');
     await page.getByRole('button', { name: 'Next ' }).click();
+
+    // Tunggu sampai URL berubah ke halaman login dan semua asinkron loading selesai (refresh selesai)
+    await page.waitForURL('**/login/**');
+    await page.waitForLoadState('networkidle');
+
     await page.locator('input[name="email"]').click();
     await page.locator('input[name="email"]').fill('elsoft.nafisah');
     await page.locator('input[name="password"]').click();
