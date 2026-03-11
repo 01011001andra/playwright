@@ -4,7 +4,7 @@ test("github invalid login test", async ({ page }) => {
   await test.step("Navigate to GitHub", async () => {
     await page.goto("https://github.com/");
   });
-
+// 1
   await test.step("Go to login page", async () => {
     await page.getByRole("link", { name: "Sign in" }).click();
   });
